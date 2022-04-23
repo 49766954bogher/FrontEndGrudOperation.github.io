@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Tp pure front-end </title>
+	<link rel="stylesheet" type="text/css" href="mycss.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+
+	
+<div id="Myform" class="myForm">
+	<fieldset>
+		<legend id="ajouter_etudiant" style="text-align: center;">Ajouter un Etudiant</legend>
+	 	<form onsubmit="event.preventDefault();OnSubmitFunction();" autocomplete="off" id="AjouterForm">
+
+	 	
+		<label>ID *</label><br>
+
+		<input type="number" min="1"  placeholder="Entrez votre numero" name="Numero" id="idNumero" required ><br>
+		<label>Nom *</label><br>
+
+		<input type="text" placeholder="Entrez votre nom" name="Nom" id="idNom" required><br>
+		<label>Prenom *</label><br>
+
+		<input type="text" placeholder="Entrez votre prenom" name="preNom" id="idprenom" required><br>
+		<!--label>Sexe :</label><br>
+		<input type="text"placeholder="Entrez votre genre: M ou F"  name="sexe" id="idSexe" pattern="[MF]{1}" required><br>
+		<label>Date de naissance :</label><br-->
+		<label for="genre" placeholder="Entrez votre genre" requiered >Genre *</label><br>
+  		<select id="idSexe" name="genre" size="1">
+    	<option value="M">M</option>
+    	<option value="F">F</option>
+    	
+  		</select>
+  		
+		<input type="date" name="date_naissanceate" id="idDateNaissance" required><br><br>
+		
+
+		
+		<button id="enregistrer" type="submit" class="btn btn-success">Enregistrer</button>
+
+
+		
+
+		<br><br>
+	
+	</form>
+	</fieldset>
+</div>	
+
+
+	<h1 id="liste_etudiant" style="text-align:center; padding: 2px;">Liste des etudiants</h1> 
+
+
+<div class="mytables">
+	<table border=1 id="mytable" class="table">
+		<thead id="myHead">
+		
+			<div id="chercher">
+			<input  type="search" id="Idchercher"  onkeyup="chercher()" placeholder="Chercher par nom..." 
+			title="chercher" >
+			<!--button conclick= "cacherElement()"; class="btn btn-primary">Ajouter un etudiant</button>
+			<i class="bi bi-search"></i-->
+			</div>
+
+		
+		
+		<tr id="mytr">
+			<th>ID </th>
+			<th > Nom </th>
+			<th>Prenom</th>
+			<th >Genre</th>
+			<th >Date de naissance</th>
+			<th>Actions</th>
+		</tr>
+		</thead>
+		<tbody id="myTbody">
+			
+
+		</tbody>
+	</table>
+	<nav aria-label="Page navigation example">
+  <ul class="pagination justify-content-center">
+    <li class="page-item disabled">
+      <a class="page-link">Previous</a>
+    </li>
+    <li class="page-item"><a class="page-link" href="#">1</a></li>
+    <li class="page-item"><a class="page-link" href="#">2</a></li>
+    <li class="page-item"><a class="page-link" href="#">3</a></li>
+    <li class="page-item">
+      <a class="page-link" href="#">Next</a>
+    </li>
+  </ul>
+</nav>
+	</fieldset>
+</div>
+
+</body>
+
+<script type="text/javascript" src="myjavascript.js"></script>
+
+	
+
+</script>
+</html>
+
